@@ -1,0 +1,162 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.array-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.array-inputs label,
+.array-inputs input,
+.array-inputs button {
+  font-size: 0.9rem;
+}
+
+.array-inputs input[type="range"] {
+  width: 100%;
+}
+
+.array-inputs #a_generate,
+.array-inputs #a_stop {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 0.3rem;
+}
+
+.array-inputs #a_stop {
+  background-color: #e74c3c;
+}
+
+.array-inputs #a_generate:hover {
+  background-color: #2980b9;
+}
+
+.array-inputs #a_stop:hover {
+  background-color: #c0392b;
+}
+
+.header-right {
+  text-align: center;
+}
+
+.nav-heading {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.algos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+.algos button {
+  background-color: #34495e;
+  border: none;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.algos button:hover {
+  background-color: #1abc9c;
+}
+
+.algos .butt_selected {
+  background-color: #2ecc71;
+  color: white;
+}
+
+/* Main and Info */
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.info-container {
+  padding: 0.5rem 0.8rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Complexity inline */
+.complexity-types-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.complexity-types-inline .pair {
+  display: flex;
+  gap: 0.25rem;
+}
+
+/* Bars */
+#array_container {
+  display: flex;
+  align-items: flex-end;
+  height: 35vh;
+  gap: 2px;
+  background-color: #ecf0f1;
+  padding: 0.8rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav,
+  .array-inputs,
+  .algos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-heading {
+    font-size: 1.2rem;
+  }
+
+  .algos button,
+  .array-inputs button {
+    width: 100%;
+  }
+
+  #array_container {
+    height: 30vh;
+  }
+}

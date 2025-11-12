@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+    .complexity-types-inline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .complexity-types-inline .pair {
+      display: flex;
+      gap: 0.25rem;
+    }
+    main {
+      padding: 1rem;
+    }
+    .info-container {
+      padding: 0.5rem 0.8rem;
+    }
+    #array_container {
+      height: 35vh;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="array-inputs">
+        <label for="a_size">Array Size</label>
+        <input id="a_size" type="range" min="20" max="150" step="1" value="80" />
+
+        <label for="a_speed">Sorting Speed</label>
+        <input id="a_speed" type="range" min="1" max="5" step="1" value="4" />
+
+        <button id="a_generate">Generate New Array</button>
+      </div>
+
+      <div class="header-right">
+        <h1 class="nav-heading">Sorting Visualizer</h1>
+        <div class="algos">
+          <button id="bubble">Bubble</button>
+          <button id="selection">Selection</button>
+          <button id="insertion">Insertion</button>
+          <button id="merge">Merge</button>
+          <button id="quick">Quick</button>
+          <button id="heap">Heap</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="info-container" id="Info_Cont1">
+      <h3>Time Complexity</h3>
+      <div class="complexity-types-inline">
+        <div class="pair"><strong>Worst:</strong> <span id="Time_Worst"></span></div>
+        <div class="pair"><strong>Average:</strong> <span id="Time_Average"></span></div>
+        <div class="pair"><strong>Best:</strong> <span id="Time_Best"></span></div>
+      </div>
+    </section>
+
+    <section id="array_container"></section>
+
+    <section class="info-container" id="Info_Cont2">
+      <h3>Space Complexity</h3>
+      <div class="complexity-types-inline">
+        <div class="pair"><strong>Worst:</strong> <span id="Space_Worst"></span></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/visualizations.js"></script>
+  <script src="./scripts/bubble_sort.js"></script>
+  <script src="./scripts/selection_sort.js"></script>
+  <script src="./scripts/insertion_sort.js"></script>
+  <script src="./scripts/merge_sort.js"></script>
+  <script src="./scripts/quick_sort.js"></script>
+  <script src="./scripts/heap_sort.js"></script>
+</body>
+</html>
