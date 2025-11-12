@@ -63,4 +63,4 @@ Sorting-Algorithm-Visualizer/
 
 ⭐ **Star this repository if you found it helpful!** ⭐
 
-*Made with ❤️ for the developer and education community by Kavya Sharma*
+
